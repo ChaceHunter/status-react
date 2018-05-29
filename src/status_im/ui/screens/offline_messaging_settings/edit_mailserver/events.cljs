@@ -42,7 +42,7 @@
                                                        :error (case input-key
                                                                 :id   false
                                                                 :name (string/blank? value)
-                                                                :url  (not (utils.inbox/valid-enode-address? value)))})})
+                                                                :url  (not (utils.inbox/valid-enode-with-password? value)))})})
 
 (defn edit-mailserver [wnode-id {:keys [db] :as cofx}]
   (let [{:keys [id
